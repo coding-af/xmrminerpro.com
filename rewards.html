@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="poolui" class="no-js lt-ie9 lt-ie8 lt-ie7" manifest="app.manifest"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="poolui" class="no-js lt-ie9 lt-ie8" manifest="app.manifest"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="poolui" class="no-js lt-ie9" manifest="app.manifest"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="poolui" class="no-js" manifest="app.manifest"> <!--<![endif]-->
+<html lang="en">
+  <head>
+    <title>XMRMINERPRO - Getting Started</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/templatemo-style.css">
+  </head>
+<body ng-cloak layout="column" ng-controller="AppCtrl">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+  
+      <!-- Wrapper -->
+      <div id="wrapper">
+        <!-- Main -->
+          <div id="main">
+            <!-- Header -->
+                          <div class="container-fluid top_stats"><div class="row">
+  
+                                  <div class="col-md-8 col-sm-12">
+                                          <span>Network: {{network.difficulty | difficultyToHashRate | toHashRate}}</span>
+                                          <span>Pool: {{poolStats.global.hashRate | toHashRate}}</span>
+                                          <span>You: {{yourTotalHashRate | toHashRate}}</span>
+                                          <span>XMR: </span></div>
+                                  <div class="col-md-4 col-sm-12">
+                                          <a href="getting-started.html" class="btn_blue">Getting Started</a>
+                                          <a href="login.html" class="btn_orange" ng-if="!isLoggedIn()">Login</a>
+                                           <a href="login.html" class="btn_orange" ng-if="isLoggedIn()">Logout</a>
+                                  </div>
+  
+                          </div></div>
+  
+          <div class="inner">
+  
+                  <section class="container-fluid">
+                  <div class="row">
+                  <div class="col-12 headings"><h1>Rewards {{voucher}}</h1></div>
+  <!--
+                                  <div class="col-md-4" *ngFor="let data of voucher">
+                                          <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top" [src]="assets\images\voucher\data.image"  alt="Card image cap">
+                                                  <div class="card-body">
+  
+                                                          <h5 class="card-title">{{data.points}}</h5>
+                                                          <p class="card-text">{{data.shop}}</p>
+                                                          <a href="{{data.url}}" class="btn btn-primary">GO</a>
+                                                  </div>
+                                          </div>
+                                  </div>
+  -->
+  
+                  <p><h6><img src="assets\images\voucher\amazon.jpg" alt="Amazon Voucher" title="Amazon Voucher">
+                  <br/>{{voucher.data[2].points}} points<h6></p>
+  
+                  <h6><img src="assets\images\voucher\steam.jpg" alt="Steam Voucher" title="Steam Voucher"><br/>
+                  <br/>1000000 points</h6>
+  
+                  <img src="assets\images\voucher\overstock.jpg" alt="Overstock Voucher" title="Overstock Voucher"><br/>
+                  1000000 points
+  
+                  </div>
+                  </section>
+                  </div>
+                  </div>
+  
+        <!-- Sidebar -->
+          <div id="sidebar">
+  
+            <div class="">
+  
+              <!-- Logo -->
+              <div class="logo">
+                <a href="index.html"> <img src="assets/images/logo.jpg" alt=""/></a>
+              </div>
+
+            <!-- Menu -->
+           <div class="fixmenu">
+                   <nav id="menu">
+              <ul>
+                <li><a href="index.html"><span class="material-icons">home</span> Home</a></li>
+                <li><a href="dashboard.html"><span class="material-icons">dashboard</span>Dashboard</a></li>
+                <li><a href="getting-started.html"><span class="material-icons">launch</span>Getting Started</a></li>
+               <li><a href="rewards.html"><span class="material-icons">emoji_events</span>Rewards</a></li>
+                <li><a href="support.html"><span class="material-icons">group</span>Support</a></li>
+                <li><a href="faq.html"><span class="material-icons">help_outline</span>FAQ</a></li>
+              </ul>
+            </nav>
+
+
+            <footer id="footer">
+              <p class="copyright">Copyright &copy; 2021 XMRMINERPRO</p>
+            </footer>
+
+          </div></div>
+        </div>
+     </div>
+
+      <script src="vendor/jquery/dist/jquery.js"></script>
+      <script src="vendor/moment/moment.js"></script>
+      <script src="vendor/lodash/dist/lodash.js"></script>
+      <script src="vendor/angular/angular.js"></script>
+      <script src="vendor/angular-route/angular-route.js"></script>
+      <script src="vendor/angular_page_visibility/dist/page_visibility.js"></script>
+      <script src="vendor/angular-animate/angular-animate.js"></script>
+      <script src="vendor/randomcolor/randomColor.js"></script>
+      <script src="vendor/d3/d3.js"></script>
+      <script src="vendor/n3-charts/build/LineChart.js"></script>
+      <script src="vendor/angular-aria/angular-aria.js"></script>
+      <script src="vendor/angular-material/angular-material.js"></script>
+      <script src="vendor/angular-material-data-table/dist/md-data-table.js"></script>
+      <script src="vendor/ngstorage/ngStorage.js"></script>
+      <script src="vendor/angular-moment/angular-moment.js"></script>
+      <script src="vendor/angular-audio/app/angular.audio.js"></script>
+      <script src="globals.js"></script>
+      <script src="utils/strings.js"></script>
+      <script src="utils/services.js"></script>
+      <script src="utils/dataservice.js"></script>
+      <script src="app.js"></script>
+      <script src="user/home/home.js"></script>
+      <script src="user/home/login.js"></script>
+      <script src="user/home/console.js"></script>
+      <script src="user/dashboard/minerpayments.js"></script>
+      <script src="user/dashboard/dashboard.js"></script>
+      <script src="user/blocks/blocks.js"></script>
+      <script src="user/payments/payments.js"></script>
+      <script src="user/network/network.js"></script>
+      <script src="user/ports/ports.js"></script>
+      <script src="user/help/chat.js"></script>
+      <script src="user/help/getting_started.js"></script>
+      <script src="user/help/portsmodal.js"></script>
+      <script src="user/help/faq.js"></script>
+
+<script src="assets/js/jquery.min.js" defer></script>
+<script src="assets/js/bootstrap.min.js" defer></script>
+<script src="assets/js/browser.min.js" defer></script>
+<script src="assets/js/breakpoints.min.js" defer></script>
+<script src="assets/js/custom.js" defer></script>
+</body>
+</html>
